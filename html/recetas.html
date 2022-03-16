@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilo.css">
+    <title>Delicia</title>
+</head>
+
+<body class="todo" id="indice">
+    <header class="header1">
+        <section class="logoInicio">
+            <a href="../index.html" class="titulo">Delicia</a>
+        </section>
+      
+        <input type="checkbox" id="check" >
+        <label for="check">
+            <img src="../iconos/menu.svg" alt="iconoHamburguesa" class="iconoHamburguesa">
+            <img src="../iconos/cancelarmenu.svg" alt="iconoCancelar" class="iconoCancelar">
+        </label>
+
+        <nav class="navegacion">
+            <ul class="menues">
+                <li><a href="../index.html" ><img src="../iconos/inicio.svg" alt="" class="icon">Inicio</a></li>
+                <li><a href="recetas.html" class="active"><img src="https://img.icons8.com/ios-filled/50/ffffff/cookbook.png" alt="" class="icon"/>Recetas</a></li>
+                <li><a href="galeria.html"><img src="https://img.icons8.com/ios-filled/100/ffffff/xlarge-icons.png" alt="" class="icon">Galeria</a></li>
+                <li><a href="sobremi.html"><img src="../iconos/sobremi.svg" alt="" class="icon">Sobre Mi</a></li>
+                <li><a href="contacto.html" ><img src="../iconos/contacto.svg" alt="" class="icon">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <main class="mainRecetas">
+        <article class="articulosRecetaFormulario">
+            <h1 class="h1-recetas">Recetas</h1>
+            <form action=""  class="recetasBusqueda">
+                <input type="text" placeholder="Ingrese su busqueda">
+                <button>Buscar</button>
+            </form>
+            <ul>
+                <li>
+                    <a href="#base_helados">A Base De Helados </a>
+                </li>
+
+                <li>
+                    <a href="#quesoyfruta">Quesos y Frutas al Natural </a>
+                </li>
+                <li>
+                    <a href="#fritos">Fritos </a>
+                </li>
+                <li>
+                    <a href="#caliente"> Caliente </a>
+                </li>
+                <li>
+                    <a href="#frio">Frio </a>
+                </li>
+            </ul>
+        </article>
+
+        <a href="#indice" class="subir" data-aos="fade-up" data-aos-duration="1000"><img src="../iconos/subir.svg"/></a>
+
+        <section id="caliente" class="recetas">
+            <h2 class="subSeccion">Caliente</h2>
+                <article class="receta1">
+                    <h3 >Receta</h3>
+                    <img src="Recetas/caliente1.jpg" alt="imgcaliente1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article  class="receta2">
+                    <h3>Receta</h3>
+                    <img src="Recetas/caliente2.jpg" alt="imgcaliente2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article  class="receta3">
+                    <h3>Receta</h3>
+                    <img src="Recetas/caliente3.jpg" alt="imgcaliente3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article id="caliente" class="verMasCaliente">
+                    <a href="recetasCaliente.html" class="titulo">Ver Mas</a>
+                </article>
+        </section>
+      
+        <section id="frio" class="recetas">
+            <h2 class="subSeccion">Frio</h2>  
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frio1.jpg" alt="imgfrio1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frio2.jpg" alt="imgfrio2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frio3.jpg" alt="imgfrio3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article class="verMasFrio">
+                    <a href="recetasFrio.html" class="titulo">Ver Mas</a>
+                </article>
+
+        </section>
+
+        <section id="fritos" class="recetas"> 
+            <h2 class="subSeccion">Frito</h2>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frito1.jpg" alt="imgfrito1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frito2.jpg" alt="imgfrito2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/frito3.jpg" alt="imgfrito3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article class="verMasFrito">
+                    <a href="recetasFrio.html" class="titulo">Ver Mas</a>
+                </article>
+
+        </section>
+        
+
+        <section id="base_helados" class="recetas">
+            <h2 class="subSeccion">A Base De Helados</h2>
+
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/base_helado1.jpg" alt="imgbase_helado1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/base_helado2.jpg" alt="imgbase_helado2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/base_helado3.jpg" alt="imgbase_helado3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article class="verMasBaseHelado">
+                    <a href="recetasFrio.html" class="titulo">Ver Mas</a>
+                </article>
+        </section>
+          
+        
+        <section id="quesoyfruta" class="recetas">
+            <h2 class="subSeccion">Quesos y Frutas al Natural</h2>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/quesoyfruta1.jpg" alt="imgquesoyfruta1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/quesoyfruta2.jpg" alt="imgquesoyfruta2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+                <article>
+                    <h3>Receta</h3>
+                    <img src="Recetas/quesoyfruta3.jpg" alt="imgquesoyfruta3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora voluptas sit modi quis, optio laudantium, voluptatem commodi recusandae fugit quibusdam ducimus, vitae obcaecati dolorum quo vel quas esse doloremque!</p>
+                </article>
+
+                <article class="verMasQuesoyFruta">
+                    <a href="recetasFrio.html" class="titulo">Ver Mas</a>
+                </article>
+        </section>
+
+    </main>
+
+    <footer class="miFooter">
+        <h3>Conocenos mas</h3>
+        <ul>
+            <li><a href="http://www.facebook.com"><img src="../iconos/facebook.svg" alt="facebook"></a></li>
+            <li><a href="http://www.twister.com"><img src="../iconos/twitter.svg" alt="twister"></a></li>
+            <li><a href="http://www.youtube.com"><img src="../iconos/youtube.svg" alt="youtube"></a></li>
+        </ul>
+        <p>copyright @ Delicia 2022- Todos los derechos</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

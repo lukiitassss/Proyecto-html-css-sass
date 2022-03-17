@@ -1,0 +1,80 @@
+/*empezamos contacto*/
+
+.mainContacto{
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../html/Contactanos/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.miFormulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(100, 5, 119, 0.815);
+    padding: 25px;
+    border-radius: 25px;
+    width  : 300px;
+    height : 350px;
+
+    &::before{
+        content: "";
+        position:absolute;
+        width: 350px;
+        height: 400px;
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+
+    input{
+        display: block;
+        margin-top: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        text-align: center;
+        border-color: cyan;
+        background-color: rgba(255, 212, 234, 0.521);
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+
+        &:hover{
+            border-color: rgb(248, 39,147);
+        }
+
+        &:focus{
+            transform: scale(1.02,1.02);
+        }
+
+        &::placeholder{
+            text-align: center;
+        }
+    }
+
+    textarea{
+        margin-top: 15px;
+        border-radius: 15px;
+        text-align: center;
+        border: 2px inset cyan;
+        background-color: rgba(255, 212, 234, 0.521);
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+        height: 150px;
+        width: 300px;
+
+        &:hover{
+            border-color: rgb(248, 39,147);
+        }
+
+        &:focus{
+            transform: scale(1.02,1.02);
+        }
+
+        &::placeholder{
+            text-align: center;
+        }
+    }
+}

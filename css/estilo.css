@@ -1,0 +1,697 @@
+/*titulo barra de arriba*/
+.header1 {
+  background-image: linear-gradient(to right, #E100FF, #7700ff);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  height: 65px;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+/*titulo barra de arriba*/
+.titulo {
+  font-size: 80px;
+  text-decoration: none;
+  color: #f82793;
+  margin-left: 2px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #ffffff;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 500; }
+
+/*esto es para el menu hamburguesa*/
+.iconoHamburguesa,
+.iconoCancelar {
+  display: none; }
+
+#check {
+  display: none; }
+
+/*titulo barra de arriba*/
+.menues {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; }
+  .menues li a {
+    display: inline-block;
+    height: 100%;
+    color: #f82793;
+    -webkit-text-stroke: 0.25px white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif; }
+    .menues li a:hover {
+      color: #00ccff;
+      background-color: #ffffff9a;
+      font-weight: bolder;
+      border-radius: 20px; }
+  .menues li .active {
+    color: #ffffff;
+    font-weight: bolder;
+    animation-name: activa;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+
+@keyframes activa {
+  0% {
+    transform: scale(1, 1); }
+  75% {
+    transform: scale(1.05, 1.05); } }
+
+.logoInicio a:hover {
+  color: #00ccff;
+  font-weight: bolder;
+  border-radius: 20px; }
+
+/*iconos*/
+.icon {
+  margin-right: 3px;
+  width: 25px;
+  height: auto; }
+
+.mainHome {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.281)), url("../fondo.jpg");
+  /* Position and center the image to scale nicely on all screens */
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/*esto es el main*/
+.tituloPrincipal {
+  font-family: 'Great Vibes', cursive;
+  font-size: 150px;
+  color: #77cef0;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 1px 1px #000000; }
+
+/*esto es el main*/
+.descripcionPrincipal {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  color: #77cef0;
+  text-shadow: 1px 1px #000000; }
+
+/*pertenece al footer*/
+.miFooter {
+  background-image: linear-gradient(to right, #E100FF, #7700ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a5a5a5;
+  height: 100px; }
+  .miFooter ul {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around; }
+    .miFooter ul li a {
+      color: #a5a5a5; }
+      .miFooter ul li a img {
+        width: 40px; }
+
+/*seccion de galeria*/
+.menugaleria {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(5, 238, 255, 0.123), rgba(5, 238, 255, 0.13)), url("html/Otras/fondo1.jpg");
+  display: grid;
+  /*transforma al contenedor flexible*/
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-template-rows: 400px 350px 400px;
+  grid-template-areas: "imagen1 imagen2 imagen3 imagen4" "imagen5 imagen6 imagen7 imagen8" "imagen9 imagen10 imagen11 imagen12";
+  column-gap: 10px;
+  /*lo que hace es dar espacio entre las columnas en la grilla*/
+  row-gap: 10px;
+  /*este lo que hace es dar espacio entre las filas*/
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .menugaleria img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: all 2s; }
+    .menugaleria img:hover {
+      border-radius: 0%;
+      z-index: 0;
+      transform: scale(1.05); }
+
+/*empezamos contacto*/
+.mainContacto {
+  height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../html/Contactanos/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.miFormulario {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(100, 5, 119, 0.815);
+  padding: 25px;
+  border-radius: 25px;
+  width: 300px;
+  height: 350px; }
+  .miFormulario::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    z-index: -1; }
+  .miFormulario input {
+    display: block;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    border-color: cyan;
+    background-color: rgba(255, 212, 234, 0.521);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px; }
+    .miFormulario input:hover {
+      border-color: #f82793; }
+    .miFormulario input:focus {
+      transform: scale(1.02, 1.02); }
+    .miFormulario input::placeholder {
+      text-align: center; }
+  .miFormulario textarea {
+    margin-top: 15px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px inset cyan;
+    background-color: rgba(255, 212, 234, 0.521);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    height: 150px;
+    width: 300px; }
+    .miFormulario textarea:hover {
+      border-color: #f82793; }
+    .miFormulario textarea:focus {
+      transform: scale(1.02, 1.02); }
+    .miFormulario textarea::placeholder {
+      text-align: center; }
+
+/*empieza la seccion sobre mi*/
+.sobreMiMain {
+  height: 900px;
+  background-color: #9900ff; }
+
+.sobreMi {
+  display: grid;
+  grid-template-columns: 600px 50%;
+  grid-template-rows: 100px 300px 50px 50px 300px;
+  grid-template-areas: "titulo video" "texto  video" "encontranos encontranos" "direccion direccion" "mapa mapa";
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around; }
+  .sobreMi a {
+    grid-area: direccion;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #ffffff; }
+
+.sobreMiMapa {
+  border: 2px solid #db7687;
+  grid-area: mapa;
+  width: 50%;
+  height: 100%; }
+
+.sobreMiTexto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  width: 100%;
+  align-self: flex-start; }
+
+.sobreMiEncontranosEn {
+  grid-area: encontranos;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #ffffff; }
+
+.sobreMiTitulo {
+  grid-area: titulo;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 60px;
+  padding-bottom: 10px;
+  color: palevioletred; }
+  .sobreMiTitulo::first-letter {
+    font-size: 5rem; }
+
+.sobreMiVideo {
+  border: 2px solid #db7687;
+  height: 80%;
+  width: 90%;
+  grid-area: video; }
+
+/*aca estamos con la seccion de recetas*/
+.todo {
+  position: relative; }
+
+.mainRecetas {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../html/Recetas/fondo.jpg); }
+
+.articulosRecetaFormulario {
+  display: flex;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 20px;
+  color: #720eac;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; }
+  .articulosRecetaFormulario form {
+    padding-bottom: 10px;
+    padding-top: 5px; }
+  .articulosRecetaFormulario ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-direction: row;
+    background-color: purple;
+    border-radius: 25px;
+    padding: 10px 10px 10px 10px; }
+    .articulosRecetaFormulario ul li a {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-left: 2px solid #a72bd8; }
+      .articulosRecetaFormulario ul li a:hover {
+        color: #133d47;
+        background-color: #ffffff9a;
+        font-weight: bolder;
+        border-radius: 20px; }
+
+.busqueda, .recetasBusqueda input, .recetasBusqueda button {
+  border-radius: 50px;
+  display: inline;
+  margin-top: 10px;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  background-color: #133d4756; }
+
+.busquedaHover, .recetasBusqueda input:hover, .recetasBusqueda button:hover {
+  color: #133d47;
+  background-color: #ffffff9a;
+  font-weight: bolder;
+  border-radius: 20px; }
+
+.recetasBusqueda button {
+  color: #353434a1; }
+
+.recetas {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  /*50% 1fr; primeramente tenia estos datos, se cambiaron para usar justify-content*/
+  grid-template-rows: 50px 400px;
+  grid-template-areas: "subSeccion subSeccion subSeccion subSeccion" " receta1 receta2 receta3 receta4";
+  column-gap: 1%;
+  /*lo que hace es dar espacio entre las columnas en la grilla*/
+  row-gap: 20px;
+  padding-top: 60px;
+  margin-bottom: 100px; }
+  .recetas article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    height: 100%;
+    padding: 15px;
+    margin: 10px 15px 12px 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 6px 6px black;
+    background-color: #e7dfff;
+    overflow: hidden; }
+    .recetas article img {
+      height: 50%;
+      width: 100%; }
+
+/*vamos a acomodar los sub titulos de cada receta*/
+.subSeccion {
+  grid-area: subSeccion;
+  align-self: end;
+  font-family: 'Roboto', sans-serif;
+  font-style: oblique;
+  -webkit-text-stroke: 1px #06fcef;
+  color: #4400ff;
+  margin-top: 100px; }
+
+.verMasUbicacion, .verMasCaliente a, .verMasFrio a, .verMasFrito a, .verMasBaseHelado a, .verMasQuesoyFruta a {
+  margin-top: 30%;
+  margin-left: 25%; }
+
+.verMasHover, .verMasCaliente a:hover, .verMasFrio a:hover, .verMasFrito a:hover, .verMasBaseHelado a:hover, .verMasQuesoyFruta a:hover {
+  font-size: 90px;
+  color: #00ccff; }
+
+/*ver mas solo de caliente*/
+.verMasCaliente {
+  background-image: url(../html/Recetas/masrecetascaliente.jpg);
+  background-size: 100% 100%; }
+
+/*-------------*/
+/*ver mas solo de frio*/
+.verMasFrio {
+  background-image: url(../html/Recetas/masrecetasfrio.jpg);
+  background-size: 100% 100%; }
+
+/*-------------*/
+/*ver mas solo de frito*/
+.verMasFrito {
+  background-image: url(../html/Recetas/masrecetasfrito.jpg);
+  background-size: 100% 100%; }
+
+/*-------------*/
+/*ver mas solo de base de helado*/
+.verMasBaseHelado {
+  background-image: url(../html/Recetas/masrecetasbase_helado.jpg);
+  background-size: 100% 100%; }
+
+/*-------------*/
+/*ver mas solo de queso y fruta*/
+.verMasQuesoyFruta {
+  background-image: url(../html/Recetas/masrecetasquesoyfruta.jpg);
+  background-size: 100% 100%; }
+
+/*-------------*/
+/*acomodar letras del titulo y subir*/
+.subir {
+  text-decoration: none;
+  margin-left: 95%;
+  height: 40px;
+  width: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 93vh; }
+  .subir img {
+    filter: grayscale(0.5);
+    filter: opacity(75%);
+    height: 100%;
+    width: 100%; }
+    .subir img:hover {
+      transform: scale(1.08, 1.08);
+      filter: opacity(100%); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+/*toda la pagina*/
+.bodySinScroll {
+  height: 100vh;
+  overflow: hidden; }
+
+/*cuerpo de la pagina*/
+.pagina {
+  height: 100vh;
+  overflow: hidden; }
+
+/*------------ empezamos a probar mediaqueries ---------------------*/
+/*para celulares*/
+@media only screen and (max-width: 600px) {
+  /*eso es el header*/
+  .header1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    position: sticky; }
+  .icon {
+    margin-right: 3px;
+    width: 20px;
+    height: 20px; }
+  .logoInicio a {
+    font-size: 60px; }
+  /*vamos a probar el nav con menu hamburguesa*/
+  .iconoHamburguesa,
+  .iconoCancelar {
+    width: 50px; }
+  .iconoCancelar {
+    display: none; }
+  .iconoHamburguesa {
+    display: block; }
+  #check:checked ~ .navegacion {
+    position: absolute;
+    display: block;
+    transition: transform .5s ease-in;
+    transform: translate(0, 0); }
+  #check:checked ~ label img.iconoCancelar {
+    display: block; }
+  #check:checked ~ * {
+    overflow-y: scroll;
+    overflow-y: hidden; }
+  #check:checked ~ label img.iconoHamburguesa {
+    display: none; }
+  .navegacion {
+    width: 100vw;
+    background-image: linear-gradient(to right, #E100FF, #7700ff);
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 99999999;
+    transition: transform .3s ease;
+    transform: translate(-100%, 0%); }
+  .menues {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%; }
+  .menues li {
+    width: 50%;
+    height: 5%;
+    text-align: center; }
+  .navegacion li a img {
+    margin-right: 10px; }
+  .menues li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Rubik', sans-serif; }
+  .menues li a.active {
+    color: #ff64af;
+    font-weight: bolder;
+    animation-name: resaltar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+  .menues li a:hover {
+    color: #ff64af;
+    background-color: #ffffff9a;
+    border-radius: 100px; }
+  @keyframes resaltar {
+    0% {
+      transform: scale(1, 1);
+      color: #ffffff; }
+    100% {
+      transform: scale(1.05, 1.05);
+      color: #ff64af; } }
+  /*--------- esto es el footer----------- */
+  .miFooter {
+    height: 70px;
+    font-size: 12px; }
+  .miFooter ul li a img {
+    width: 20px; }
+  .miFooter ul {
+    width: 80px; }
+  /*-----------  esto es el main PRINCIPAL------------*/
+  .mainHome {
+    align-items: flex-start;
+    padding: 30%;
+    background-position: center center;
+    background-attachment: fixed; }
+  .tituloPrincipal {
+    font-family: 'Great Vibes', cursive;
+    align-items: flex-start;
+    justify-items: center;
+    font-size: 100px; }
+  .descripcionPrincipal {
+    font-size: 30px; }
+  /*----------- esto pertenece a la galeria ---------------*/
+  .menugaleria {
+    display: grid;
+    /*transforma al contenedor flexible*/
+    grid-template-columns: 70%;
+    grid-template-rows: 350px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+    grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4" "imagen5" "imagen6" "imagen7" "imagen8" "imagen9" "imagen10" "imagen11" "imagen12";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center; }
+  /*---------esto pertenece a la seccion sobre mi-----*/
+  .sobreMiMain {
+    height: 900px;
+    display: flex; }
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 900px; }
+  .sobreMiTitulo {
+    text-align: center;
+    justify-items: center; }
+  .sobreMiTexto {
+    text-align: center;
+    justify-items: center;
+    font-size: 15px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .sobreMiEncontranosEn {
+    text-align: center;
+    font-size: 15px; }
+  .sobreMi a {
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+    text-align: center; }
+  .sobreMi a img {
+    height: 15px;
+    width: 15px; }
+  .sobreMiMapa {
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .sobreMiVideo {
+    justify-self: center;
+    width: 70%;
+    margin: 0%;
+    padding: 0%; }
+  /*USAR GRID EN EL ORIGINAL*/
+  /*seccion contacto*/
+  .mainContacto {
+    height: calc(100vh - 146px); }
+  /*aca estamos con la seccion de recetas*/
+  .articulosRecetaFormulario ul {
+    display: grid;
+    width: 80%;
+    padding-top: 30px;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 70px 70px 70px;
+    grid-template-areas: "caliente frio" "fritos base_helados" "quesoyfruta quesoyfruta";
+    border-radius: 80px;
+    justify-items: center;
+    align-items: center;
+    background-color: #ec73d2c4; }
+  .recetasBusqueda input {
+    border-radius: 50px;
+    display: inline;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffffad;
+    text-align: center; }
+  .recetasBusqueda button {
+    border-radius: 50px;
+    display: inline;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffffad;
+    color: grey; }
+  .recetas {
+    display: grid;
+    grid-template-columns: 90%;
+    /*50% 1fr; primeramente tenia estos datos, se cambiaron para usar justify-content*/
+    grid-template-rows: 30px 400px 400px 400px 400px;
+    grid-template-areas: "subSeccion" " receta1" " receta2" " receta3" "receta4";
+    row-gap: 10px;
+    padding-top: 20px;
+    margin-bottom: 80px; }
+  .subir {
+    text-decoration: none;
+    margin-left: 50%;
+    height: 30px;
+    position: sticky;
+    top: 93vh; }
+  /*ver mas solo de caliente*/
+  .verMasCaliente a {
+    font-size: 65px;
+    margin-top: 50%;
+    margin-left: 10%; }
+  .verMasCaliente a:hover {
+    font-size: 70px;
+    margin-left: 9%; }
+  /*-------------*/
+  /*ver mas solo de frio*/
+  .verMasFrio a {
+    font-size: 65px;
+    margin-top: 50%;
+    margin-left: 10%; }
+  .verMasFrio a:hover {
+    font-size: 70px;
+    margin-left: 9%; }
+  /*-------------*/
+  /*ver mas solo de frito*/
+  .verMasFrito a {
+    font-size: 65px;
+    margin-top: 50%;
+    margin-left: 10%; }
+  .verMasFrito a:hover {
+    font-size: 70px;
+    margin-left: 9%; }
+  /*-------------*/
+  /*ver mas solo de base de helado*/
+  .verMasBaseHelado a {
+    font-size: 65px;
+    margin-top: 50%;
+    margin-left: 10%; }
+  .verMasBaseHelado a:hover {
+    font-size: 70px;
+    margin-left: 9%; }
+  /*-------------*/
+  /*ver mas solo de queso y fruta*/
+  .verMasQuesoyFruta a {
+    font-size: 65px;
+    margin-top: 50%;
+    margin-left: 10%; }
+  .verMasQuesoyFruta a:hover {
+    font-size: 70px;
+    margin-left: 9%; }
+  /*vamos a acomodar los sub titulos de cada receta*/
+  .subSeccion {
+    margin-top: 10px; }
+  .recetas article {
+    height: 90%; } }

@@ -1,0 +1,33 @@
+.mainHome{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.281)), url("../fondo.jpg");  
+    /* Position and center the image to scale nicely on all screens */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+
+/*esto es el main*/
+.tituloPrincipal{
+    font-family: 'Great Vibes', cursive;
+    font-size: 150px;
+    color: rgb(119, 206, 240);
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
+/*esto es el main*/
+.descripcionPrincipal {
+font-size: 40px;
+text-align: center;
+font-family: 'Dancing Script', cursive;
+font-weight: bolder;
+color: rgb(119, 206, 240);
+text-shadow: 1px 1px #000000;
+}

@@ -1,0 +1,114 @@
+
+/*titulo barra de arriba*/
+
+.header1{
+    background-image: linear-gradient(to right, #E100FF,#7700ff);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}       
+
+
+
+/*titulo barra de arriba*/
+.titulo {
+    font-size: 80px;
+    text-decoration: none;
+    color: rgb(248, 39,147);
+    margin-left: 2px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #ffffff;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+}
+
+
+
+/*esto es para el menu hamburguesa*/
+
+.iconoHamburguesa,
+.iconoCancelar  {
+    display: none;
+}
+
+
+#check{
+    display: none;
+}
+
+
+/*titulo barra de arriba*/
+.menues {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    li{
+        a{
+            display: inline-block;
+            height: 100%;
+            color: rgb(248, 39,147);
+            -webkit-text-stroke: 0.25px rgb(255, 255, 255);
+            text-decoration: none;
+            margin-left: 10px;  
+            margin-right: 10px;
+            padding: 8px;
+            font-size: 20px;
+            font-weight: 700;   
+            font-family: 'Rubik', sans-serif;
+
+            &:hover{
+                color: #00ccff;
+                background-color: #ffffff9a;
+                font-weight: bolder;
+                border-radius: 20px;
+            }
+        }
+
+        .active{
+            color: #ffffff;
+            font-weight: bolder;
+            animation-name: activa;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+
+}   
+
+
+@keyframes activa  {
+    0%{
+        transform: scale(1,1);
+    }
+
+    75%{
+        transform: scale(1.05,1.05);
+    }
+    
+}
+
+.logoInicio {
+    a{
+        &:hover {
+            color: #00ccff;
+            font-weight: bolder;
+            border-radius: 20px;
+        }
+    }
+
+}
+
+/*iconos*/
+.icon {
+    margin-right: 3px;
+    width: 25px;
+   height: auto;
+}

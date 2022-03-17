@@ -1,0 +1,28 @@
+/*pertenece al footer*/
+.miFooter{
+    background-image: linear-gradient(to right, #E100FF,#7700ff);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color: rgb(165, 165, 165);
+    height: 100px;
+
+
+    ul  {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+        li{
+            a{
+                color: rgb(165, 165, 165);
+
+                img{
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

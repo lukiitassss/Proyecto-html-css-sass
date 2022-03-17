@@ -1,0 +1,251 @@
+
+/*aca estamos con la seccion de recetas*/
+.todo{
+    position: relative;
+}
+
+
+.mainRecetas{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../html/Recetas/fondo.jpg);
+}
+
+
+.articulosRecetaFormulario{
+    display: flex;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 20px;
+    color: rgb(114, 14, 172);
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    
+    form{
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        flex-direction: row;
+        background-color: purple;
+        border-radius: 25px;
+        padding: 10px 10px 10px 10px;
+
+        li{
+            a{
+                text-decoration:none;
+                color: white;
+                display: inline-block;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-left: 2px solid rgb(167, 43, 216);
+
+                &:hover{
+                    color: #133d47;
+                    background-color: #ffffff9a;
+                    font-weight: bolder;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.busqueda{
+    border-radius: 50px;
+    display: inline;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    background-color: #133d4756;
+}
+
+.busquedaHover{
+    color: #133d47;
+    background-color: #ffffff9a;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.recetasBusqueda {
+    input{
+        @extend .busqueda;
+        
+        &:hover{
+            @extend .busquedaHover
+        }
+    }
+
+    button{
+        @extend .busqueda;
+        color: #353434a1 ;
+
+        &:hover{
+            @extend .busquedaHover
+        }
+    }
+}
+
+
+.recetas{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%; /*50% 1fr; primeramente tenia estos datos, se cambiaron para usar justify-content*/
+    grid-template-rows: 50px 400px;
+    grid-template-areas: "subSeccion subSeccion subSeccion subSeccion"
+                       " receta1 receta2 receta3 receta4";
+    column-gap: 1%; /*lo que hace es dar espacio entre las columnas en la grilla*/
+    row-gap: 20px;
+    padding-top: 60px;
+    margin-bottom: 100px;
+
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 85%;
+        height: 100%;
+        padding: 15px;
+        margin:10px 15px 12px 10px ;
+        border: 1px solid black;
+        border-radius: 25px;
+        box-shadow: 6px 6px black;
+        background-color: #e7dfff;
+        overflow: hidden;
+
+        img{
+            height: 50%;
+            width: 100%;
+        }
+    }
+}
+
+
+/*vamos a acomodar los sub titulos de cada receta*/
+.subSeccion{
+    grid-area:subSeccion;
+    align-self: end;
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+    -webkit-text-stroke: 1px rgb(6, 252, 239);
+    color:#4400ff ;
+    margin-top: 100px;
+}
+
+
+
+.verMasUbicacion{
+    margin-top: 30%;
+    margin-left: 25%;
+}
+
+.verMasHover{
+    font-size: 90px;
+    color: #00ccff;
+}
+
+/*ver mas solo de caliente*/
+.verMasCaliente{
+    background-image: url(../html/Recetas/masrecetascaliente.jpg);
+    background-size: 100% 100%; 
+    a{
+        @extend .verMasUbicacion;
+        &:hover{
+            @extend .verMasHover;
+        }
+    }
+}
+/*-------------*/
+
+/*ver mas solo de frio*/
+.verMasFrio{
+    background-image: url(../html/Recetas/masrecetasfrio.jpg);
+    background-size: 100% 100%; 
+    a{
+        @extend .verMasUbicacion;
+        &:hover{
+            @extend .verMasHover;
+        }
+    }
+}
+
+
+/*-------------*/
+
+/*ver mas solo de frito*/
+.verMasFrito{
+    background-image: url(../html/Recetas/masrecetasfrito.jpg);
+    background-size: 100% 100%; 
+    a{
+        @extend .verMasUbicacion;
+        &:hover{
+            @extend .verMasHover;
+        }
+    }
+}
+
+
+/*-------------*/
+
+/*ver mas solo de base de helado*/
+.verMasBaseHelado{
+    background-image: url(../html/Recetas/masrecetasbase_helado.jpg);
+    background-size: 100% 100%; 
+    a{
+        @extend .verMasUbicacion;
+        &:hover{
+            @extend .verMasHover;
+        }
+    }
+}
+
+/*-------------*/
+
+/*ver mas solo de queso y fruta*/
+.verMasQuesoyFruta{
+    background-image: url(../html/Recetas/masrecetasquesoyfruta.jpg);
+    background-size: 100% 100%; 
+    a{
+        @extend .verMasUbicacion;
+        &:hover{
+            @extend .verMasHover;
+        }
+    }
+}
+
+/*-------------*/
+
+
+
+/*acomodar letras del titulo y subir*/
+.subir{
+    text-decoration: none;
+    margin-left: 95%;
+    height: 40px;
+    width: 40px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 93vh;
+    
+    img{
+        filter: grayscale(0.5);
+        filter: opacity(75%);
+        height: 100%;
+        width: 100%;
+        
+
+        &:hover{
+            transform: scale(1.08,1.08);
+            filter: opacity(100%);
+        }
+    }
+}
+

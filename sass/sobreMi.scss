@@ -1,0 +1,72 @@
+
+/*empieza la seccion sobre mi*/
+.sobreMiMain{
+    height:900px ;
+    background-color:rgb(153, 0, 255);
+}
+
+.sobreMi{
+    display: grid;
+    grid-template-columns:600px 50%;
+    grid-template-rows: 100px 300px 50px 50px 300px;
+    grid-template-areas:"titulo video"
+                        "texto  video"
+                        "encontranos encontranos"
+                        "direccion direccion"
+                        "mapa mapa";
+   justify-items:center;
+   align-items: center;
+   justify-content: space-around;
+
+   a{
+    grid-area: direccion;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+   }
+}
+
+.sobreMiMapa{
+    border: 2px solid rgb(219, 118, 135);
+    grid-area: mapa;
+    width: 50%;
+    height: 100%
+}
+
+.sobreMiTexto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    width: 100%;
+    align-self:flex-start;
+
+}
+
+.sobreMiEncontranosEn{
+    grid-area: encontranos;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+
+.sobreMiTitulo{
+    grid-area: titulo;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 60px;
+    padding-bottom: 10px;
+    color: palevioletred;
+
+    &::first-letter{
+        font-size: 5rem;
+    }
+}
+
+.sobreMiVideo{
+    border: 2px solid rgb(219, 118, 135);
+    height: 80%;
+    width: 90%;
+    grid-area: video;
+}

@@ -26,3 +26,30 @@
         }
     }
 }
+
+
+/*------------ empezamos a probar mediaqueries ---------------------*/
+/*para celulares*/
+@media only screen and (max-width:600px) {
+
+    /*--------- esto es el footer----------- */
+    .miFooter{
+
+        height: 70px;
+        font-size: 12px;
+
+        ul{
+            width: 80px;
+
+            li{
+                a{
+    
+                    img{
+                        width: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+}

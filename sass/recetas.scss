@@ -249,3 +249,146 @@
     }
 }
 
+@media only screen and (max-width:600px) {
+         
+    .articulosRecetaFormulario ul {
+         display: grid;
+         width: 80%;
+         padding-top: 30px;
+         grid-template-columns: 40% 40%;
+         grid-template-rows: 70px 70px 70px;
+         grid-template-areas: "caliente frio"
+                              "fritos base_helados"
+                              "quesoyfruta quesoyfruta";
+         border-radius: 80px;
+         justify-items:center;
+         align-items: center;
+         background-color: #ec73d2c4;
+    }
+ 
+ 
+    .recetasBusqueda input{
+         border-radius: 50px;
+         display: inline;
+         margin-top: 10px;
+         border-radius: 15px;
+         padding: 5px;
+         text-align: center;
+         background-color: #ffffffad;
+         text-align: center;;
+         
+    }
+ 
+    .recetasBusqueda button {
+         border-radius: 50px;
+         display: inline;
+         margin-top: 10px;
+         border-radius: 15px;
+         padding: 5px;
+         text-align: center;
+         background-color: #ffffffad;
+         color: grey;
+    }   
+ 
+ 
+    .recetas{
+         display: grid;
+         grid-template-columns: 90%; /*50% 1fr; primeramente tenia estos datos, se cambiaron para usar justify-content*/
+         grid-template-rows: 30px 400px 400px 400px 400px;
+         grid-template-areas: "subSeccion"
+                            " receta1"
+                            " receta2"
+                            " receta3"
+                            "receta4";
+         row-gap: 10px;
+         padding-top: 20px;
+         margin-bottom: 80px;
+    }
+ 
+ 
+    .subir{
+         margin-left: 50%;     
+    }
+  
+    /*ver mas solo de caliente*/
+    .verMas{
+        font-size: 65px;
+        margin-top: 50%;
+        margin-left: 10%;
+    }
+
+    .verMasHoverCelu{
+        font-size: 67px;
+        margin-left: 9%;
+    }
+    .verMasCaliente a{
+        @extend .verMas;
+    }
+ 
+ 
+    .verMasCaliente a:hover{
+        @extend .verMasHoverCelu;
+    }
+ 
+ 
+    /*-------------*/
+ 
+    /*ver mas solo de frio*/
+    .verMasFrio a{
+        @extend .verMas;
+    }
+ 
+ 
+    .verMasFrio a:hover{
+        @extend .verMasHoverCelu;
+    }
+ 
+    /*-------------*/
+ 
+    /*ver mas solo de frito*/
+    .verMasFrito a{
+        @extend .verMas;
+    }
+ 
+ 
+    .verMasFrito a:hover{
+        @extend .verMasHoverCelu;
+    }
+ 
+    /*-------------*/
+ 
+    /*ver mas solo de base de helado*/
+    .verMasBaseHelado a{
+        @extend .verMas;
+    }
+ 
+ 
+    .verMasBaseHelado a:hover{
+        @extend .verMasHoverCelu;
+    }
+ 
+ 
+    /*-------------*/
+ 
+    /*ver mas solo de queso y fruta*/
+    .verMasQuesoyFruta a{
+        @extend .verMas;
+    }
+ 
+ 
+    .verMasQuesoyFruta a:hover{
+        @extend .verMasHoverCelu;
+    }
+ 
+ 
+    /*vamos a acomodar los sub titulos de cada receta*/
+    .subSeccion{
+         margin-top: 10px;
+    }
+ 
+    .recetas article {
+         height: 90%;
+ 
+    }
+ 
+}

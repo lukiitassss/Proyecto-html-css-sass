@@ -76,6 +76,86 @@
   width: 25px;
   height: auto; }
 
+/*------------ empezamos a probar mediaqueries ---------------------*/
+/*para celulares*/
+@media only screen and (max-width: 600px) {
+  /*eso es el header*/
+  .header1 {
+    flex-direction: row;
+    align-items: center;
+    height: 55px; }
+  .icon {
+    width: 20px;
+    height: 20px; }
+  .logoInicio a {
+    font-size: 60px; }
+  /*vamos a probar el nav con menu hamburguesa*/
+  .iconoHamburguesa,
+  .iconoCancelar {
+    width: 50px; }
+  .iconoCancelar {
+    display: none; }
+  .iconoHamburguesa {
+    display: block; }
+  #check:checked ~ .navegacion {
+    position: absolute;
+    display: block;
+    transition: transform .5s ease-in;
+    transform: translate(0, 0); }
+  #check:checked ~ label img.iconoCancelar {
+    display: block; }
+  #check:checked ~ * {
+    overflow-y: scroll;
+    overflow-y: hidden; }
+  #check:checked ~ label img.iconoHamburguesa {
+    display: none; }
+  .navegacion {
+    width: 100vw;
+    background-image: linear-gradient(to right, #E100FF, #7700ff);
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 99999999;
+    transition: transform .3s ease;
+    transform: translate(-100%, 0%); }
+  .navegacion li a img {
+    margin-right: 10px; }
+  .menues {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%; }
+    .menues li {
+      width: 50%;
+      height: 5%;
+      text-align: center; }
+      .menues li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 30px;
+        font-size: 24px;
+        font-weight: normal;
+        font-family: 'Rubik', sans-serif; }
+        .menues li a .active {
+          font-weight: bolder;
+          animation-name: activa;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate; }
+        .menues li a:hover {
+          color: #64e0ff;
+          background-color: #ffffff9a;
+          border-radius: 100px; }
+  @keyframes activa {
+    0% {
+      color: #ffffff; }
+    100% {
+      color: #ff64af; } } }
+
 .mainHome {
   height: 100%;
   display: flex;
@@ -106,6 +186,21 @@
   color: #77cef0;
   text-shadow: 1px 1px #000000; }
 
+@media only screen and (max-width: 600px) {
+  /*-----------  esto es el main PRINCIPAL------------*/
+  .mainHome {
+    align-items: flex-start;
+    padding: 30%;
+    background-position: center center;
+    background-attachment: fixed; }
+  .tituloPrincipal {
+    font-family: 'Great Vibes', cursive;
+    align-items: flex-start;
+    justify-items: center;
+    font-size: 100px; }
+  .descripcionPrincipal {
+    font-size: 30px; } }
+
 /*pertenece al footer*/
 .miFooter {
   background-image: linear-gradient(to right, #E100FF, #7700ff);
@@ -124,6 +219,18 @@
       color: #a5a5a5; }
       .miFooter ul li a img {
         width: 40px; }
+
+/*------------ empezamos a probar mediaqueries ---------------------*/
+/*para celulares*/
+@media only screen and (max-width: 600px) {
+  /*--------- esto es el footer----------- */
+  .miFooter {
+    height: 70px;
+    font-size: 12px; }
+    .miFooter ul {
+      width: 80px; }
+      .miFooter ul li a img {
+        width: 20px; } }
 
 /*seccion de galeria*/
 .menugaleria {
@@ -154,6 +261,19 @@
       border-radius: 0%;
       z-index: 0;
       transform: scale(1.05); }
+
+@media only screen and (max-width: 600px) {
+  /*----------- esto pertenece a la galeria ---------------*/
+  .menugaleria {
+    display: grid;
+    /*transforma al contenedor flexible*/
+    grid-template-columns: 70%;
+    grid-template-rows: 350px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+    grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4" "imagen5" "imagen6" "imagen7" "imagen8" "imagen9" "imagen10" "imagen11" "imagen12";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center; } }
 
 /*empezamos contacto*/
 .mainContacto {
@@ -215,6 +335,17 @@
     .miFormulario textarea::placeholder {
       text-align: center; }
 
+@media only screen and (max-width: 600px) {
+  .miFormulario {
+    width: 80%;
+    height: 70%; }
+    .miFormulario textarea {
+      width: 100%;
+      height: 100%; }
+  /*seccion contacto*/
+  .mainContacto {
+    height: calc(100vh - 70px); } }
+
 /*empieza la seccion sobre mi*/
 .sobreMiMain {
   height: 900px;
@@ -269,6 +400,48 @@
   height: 80%;
   width: 90%;
   grid-area: video; }
+
+@media only screen and (max-width: 600px) {
+  /*---------esto pertenece a la seccion sobre mi-----*/
+  .sobreMiMain {
+    height: 900px;
+    display: flex; }
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 900px; }
+    .sobreMi a {
+      margin-top: 10px;
+      height: 100px;
+      width: 100%;
+      text-align: center; }
+      .sobreMi a img {
+        height: 15px;
+        width: 15px; }
+  .sobreMiTitulo {
+    text-align: center;
+    justify-items: center; }
+  .sobreMiTexto {
+    text-align: center;
+    justify-items: center;
+    font-size: 15px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .sobreMiEncontranosEn {
+    text-align: center;
+    font-size: 15px; }
+  .sobreMiMapa {
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .sobreMiVideo {
+    justify-self: center;
+    width: 70%;
+    margin: 0%;
+    padding: 0%; } }
 
 /*aca estamos con la seccion de recetas*/
 .todo {
@@ -425,183 +598,7 @@
       transform: scale(1.08, 1.08);
       filter: opacity(100%); }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-/*toda la pagina*/
-.bodySinScroll {
-  height: 100vh;
-  overflow: hidden; }
-
-/*cuerpo de la pagina*/
-.pagina {
-  height: 100vh;
-  overflow: hidden; }
-
-/*------------ empezamos a probar mediaqueries ---------------------*/
-/*para celulares*/
 @media only screen and (max-width: 600px) {
-  /*eso es el header*/
-  .header1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 55px;
-    position: sticky; }
-  .icon {
-    margin-right: 3px;
-    width: 20px;
-    height: 20px; }
-  .logoInicio a {
-    font-size: 60px; }
-  /*vamos a probar el nav con menu hamburguesa*/
-  .iconoHamburguesa,
-  .iconoCancelar {
-    width: 50px; }
-  .iconoCancelar {
-    display: none; }
-  .iconoHamburguesa {
-    display: block; }
-  #check:checked ~ .navegacion {
-    position: absolute;
-    display: block;
-    transition: transform .5s ease-in;
-    transform: translate(0, 0); }
-  #check:checked ~ label img.iconoCancelar {
-    display: block; }
-  #check:checked ~ * {
-    overflow-y: scroll;
-    overflow-y: hidden; }
-  #check:checked ~ label img.iconoHamburguesa {
-    display: none; }
-  .navegacion {
-    width: 100vw;
-    background-image: linear-gradient(to right, #E100FF, #7700ff);
-    height: 100vh;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    z-index: 99999999;
-    transition: transform .3s ease;
-    transform: translate(-100%, 0%); }
-  .menues {
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60%; }
-  .menues li {
-    width: 50%;
-    height: 5%;
-    text-align: center; }
-  .navegacion li a img {
-    margin-right: 10px; }
-  .menues li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 30px;
-    font-size: 24px;
-    font-weight: normal;
-    font-family: 'Rubik', sans-serif; }
-  .menues li a.active {
-    color: #ff64af;
-    font-weight: bolder;
-    animation-name: resaltar;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; }
-  .menues li a:hover {
-    color: #ff64af;
-    background-color: #ffffff9a;
-    border-radius: 100px; }
-  @keyframes resaltar {
-    0% {
-      transform: scale(1, 1);
-      color: #ffffff; }
-    100% {
-      transform: scale(1.05, 1.05);
-      color: #ff64af; } }
-  /*--------- esto es el footer----------- */
-  .miFooter {
-    height: 70px;
-    font-size: 12px; }
-  .miFooter ul li a img {
-    width: 20px; }
-  .miFooter ul {
-    width: 80px; }
-  /*-----------  esto es el main PRINCIPAL------------*/
-  .mainHome {
-    align-items: flex-start;
-    padding: 30%;
-    background-position: center center;
-    background-attachment: fixed; }
-  .tituloPrincipal {
-    font-family: 'Great Vibes', cursive;
-    align-items: flex-start;
-    justify-items: center;
-    font-size: 100px; }
-  .descripcionPrincipal {
-    font-size: 30px; }
-  /*----------- esto pertenece a la galeria ---------------*/
-  .menugaleria {
-    display: grid;
-    /*transforma al contenedor flexible*/
-    grid-template-columns: 70%;
-    grid-template-rows: 350px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
-    grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4" "imagen5" "imagen6" "imagen7" "imagen8" "imagen9" "imagen10" "imagen11" "imagen12";
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center; }
-  /*---------esto pertenece a la seccion sobre mi-----*/
-  .sobreMiMain {
-    height: 900px;
-    display: flex; }
-  .sobreMi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 900px; }
-  .sobreMiTitulo {
-    text-align: center;
-    justify-items: center; }
-  .sobreMiTexto {
-    text-align: center;
-    justify-items: center;
-    font-size: 15px;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%; }
-  .sobreMiEncontranosEn {
-    text-align: center;
-    font-size: 15px; }
-  .sobreMi a {
-    margin-top: 10px;
-    height: 100px;
-    width: 100%;
-    text-align: center; }
-  .sobreMi a img {
-    height: 15px;
-    width: 15px; }
-  .sobreMiMapa {
-    height: 80%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%; }
-  .sobreMiVideo {
-    justify-self: center;
-    width: 70%;
-    margin: 0%;
-    padding: 0%; }
-  /*USAR GRID EN EL ORIGINAL*/
-  /*seccion contacto*/
-  .mainContacto {
-    height: calc(100vh - 146px); }
-  /*aca estamos con la seccion de recetas*/
   .articulosRecetaFormulario ul {
     display: grid;
     width: 80%;
@@ -641,57 +638,39 @@
     padding-top: 20px;
     margin-bottom: 80px; }
   .subir {
-    text-decoration: none;
-    margin-left: 50%;
-    height: 30px;
-    position: sticky;
-    top: 93vh; }
+    margin-left: 50%; }
   /*ver mas solo de caliente*/
-  .verMasCaliente a {
+  .verMas, .verMasCaliente a, .verMasFrio a, .verMasFrito a, .verMasBaseHelado a, .verMasQuesoyFruta a {
     font-size: 65px;
     margin-top: 50%;
     margin-left: 10%; }
-  .verMasCaliente a:hover {
-    font-size: 70px;
+  .verMasHoverCelu, .verMasCaliente a:hover, .verMasFrio a:hover, .verMasFrito a:hover, .verMasBaseHelado a:hover, .verMasQuesoyFruta a:hover {
+    font-size: 67px;
     margin-left: 9%; }
   /*-------------*/
   /*ver mas solo de frio*/
-  .verMasFrio a {
-    font-size: 65px;
-    margin-top: 50%;
-    margin-left: 10%; }
-  .verMasFrio a:hover {
-    font-size: 70px;
-    margin-left: 9%; }
   /*-------------*/
   /*ver mas solo de frito*/
-  .verMasFrito a {
-    font-size: 65px;
-    margin-top: 50%;
-    margin-left: 10%; }
-  .verMasFrito a:hover {
-    font-size: 70px;
-    margin-left: 9%; }
   /*-------------*/
   /*ver mas solo de base de helado*/
-  .verMasBaseHelado a {
-    font-size: 65px;
-    margin-top: 50%;
-    margin-left: 10%; }
-  .verMasBaseHelado a:hover {
-    font-size: 70px;
-    margin-left: 9%; }
   /*-------------*/
   /*ver mas solo de queso y fruta*/
-  .verMasQuesoyFruta a {
-    font-size: 65px;
-    margin-top: 50%;
-    margin-left: 10%; }
-  .verMasQuesoyFruta a:hover {
-    font-size: 70px;
-    margin-left: 9%; }
   /*vamos a acomodar los sub titulos de cada receta*/
   .subSeccion {
     margin-top: 10px; }
   .recetas article {
     height: 90%; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+/*toda la pagina*/
+.bodySinScroll {
+  height: 100vh;
+  overflow: hidden; }
+
+/*cuerpo de la pagina*/
+.pagina {
+  height: 100vh;
+  overflow: hidden; }

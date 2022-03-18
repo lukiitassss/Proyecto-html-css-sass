@@ -70,3 +70,68 @@
     width: 90%;
     grid-area: video;
 }
+
+
+@media only screen and (max-width:600px) {
+
+    /*---------esto pertenece a la seccion sobre mi-----*/
+    .sobreMiMain{
+        height: 900px;
+        display: flex;
+    }
+    
+    .sobreMi{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 900px;
+
+        a{
+            margin-top: 10px;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+
+            img{
+                height: 15px;
+                width: 15px;
+            }
+        }
+        
+    }
+
+    .sobreMiTitulo{
+        text-align: center;
+        justify-items: center;
+    }
+
+    .sobreMiTexto{
+        text-align: center;
+        justify-items: center;
+        font-size: 15px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .sobreMiEncontranosEn
+    {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .sobreMiMapa{
+        height: 80%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+
+    .sobreMiVideo{
+        justify-self: center;
+        width: 70%;
+        margin: 0%;
+        padding: 0%;
+    }
+}

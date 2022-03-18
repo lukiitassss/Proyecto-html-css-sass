@@ -24,10 +24,39 @@
 
 /*esto es el main*/
 .descripcionPrincipal {
-font-size: 40px;
-text-align: center;
-font-family: 'Dancing Script', cursive;
-font-weight: bolder;
-color: rgb(119, 206, 240);
-text-shadow: 1px 1px #000000;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    color: rgb(119, 206, 240);
+    text-shadow: 1px 1px #000000;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    /*-----------  esto es el main PRINCIPAL------------*/
+
+    .mainHome{
+        align-items: flex-start;
+        padding: 30%;
+        background-position: center center;
+        background-attachment: fixed;
+
+    }
+
+
+    .tituloPrincipal{
+        font-family: 'Great Vibes', cursive;
+        align-items: flex-start;
+        justify-items: center;
+        font-size: 100px;
+ 
+    }
+    
+    
+    .descripcionPrincipal {
+     font-size: 30px;
+
+    }
 }

@@ -32,3 +32,29 @@
         }
     }
 }
+
+@media only screen and (max-width:600px) {
+
+    /*----------- esto pertenece a la galeria ---------------*/
+    .menugaleria{
+        display: grid;/*transforma al contenedor flexible*/
+        grid-template-columns: 70%;
+        grid-template-rows: 350px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px ;
+        grid-template-areas: "imagen1"
+                             "imagen2"
+                             "imagen3"
+                             "imagen4"
+                             "imagen5"
+                             "imagen6"
+                             "imagen7"
+                             "imagen8"
+                             "imagen9"
+                             "imagen10"
+                             "imagen11"
+                             "imagen12";
+        justify-items:center;
+        align-items: center;
+        justify-content:center;
+        align-content: center;
+    }
+}
